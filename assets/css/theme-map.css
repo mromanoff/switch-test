@@ -1,0 +1,150 @@
+:root {
+  /**
+   * Header
+   */
+  --Header-color: var(--color--white);
+  --Header-backgroundColor: var(--color--blue700);
+  --Header-linkColor: var(--link-color);
+  --Header-onHover-linkColor: var(--link-color--onHover);
+  --Header--mobile-height: 48px;
+  --Header--desktop-height: 48px;
+
+  /**
+ * Footer
+ */
+  --Footer-color: var(--color--white);
+  --Footer-backgroundColor: var(--color--blue700);
+  --Footer-link: var(--color--white);
+  --Footer-onHover-link: var(--color--white);
+  --Footer-fontSize: var(--font-size--small);
+  --Footer--mobile-height: 52px;
+  --Footer--desktop-height: 58px;
+
+  /**
+  * Container
+  */
+  --main--width: 900px;
+  --aside--width: 300px;
+
+  /*
+  * Module
+   */
+  --Module--margin-small: 2rem;
+  --Module--margin-medium: 4rem;
+  --Module--margin-large: 6rem;
+
+  /**
+   * Form
+   */
+  --Form-label-color: var(--color--grey900);
+  --Form-label-font-size: var(--font-size--small);
+  --Form-label-font-weight: normal;
+
+  --Form-input-border-color: var(--color--grey400);
+  --Form-input-border-radius: 0;
+  --Form-input-background: transparent;
+  --Form-input-color: currentcolor;
+  --Form-input-font-size: var(--font-size);
+  --Form-input-padding: var(--space--medium);
+  --Form-input-height: 56px;
+  --Form-input-disabled: 0.55;
+
+  --Form--spaced-margin: var(--space--small);
+  --Form-state-invalid-border-color: var(--color--red500);
+  --Form-state-invalid-label-color: var(--color--red500);
+  --Form-state-invalid-message-color: var(--color--red500);
+  --Form-select-arrow: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE2LjYgOC42TDEyIDEzLjIgNy40IDguNiA2IDEwbDYgNiA2LTYtMS40LTEuNHoiIGZpbGw9IiM3ODhhOWEiLz48cGF0aCBkPSJNMCAwaDI0djI0SDBWMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4=);
+  --Form-select-arrow--white: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNNy40MSw4LjU5TDEyLDEzLjE3bDQuNTktNC41OEwxOCwxMGwtNiw2bC02LTZMNy40MSw4LjU5eiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wLDBoMjR2MjRIMFYweiIvPjwvc3ZnPg==);
+  --Form-select-arrow-width: 36px;
+  --Form-select-arrow-width--small: 24px;
+  --Form-select-arrow--small: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4gICAgICAgICAgICAgICAgPHBhdGggZD0iTTcgMTBsNSA1IDUtNXoiPjwvcGF0aD4gICAgICAgICAgICAgIDwvc3ZnPg==);
+  --Form-select-arrow--smallWhite: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI0IDI0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNNywxMGw1LDVsNS01SDd6Ii8+PC9zdmc+);
+  --Form-select-arrow--smallBlue: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjQgMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMjk3OEJFO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTcsMTBsNSw1bDUtNUg3eiIvPgo8L3N2Zz4K');
+
+  /**
+   * Icons
+   */
+  --Icon-size--xLarge: 48px;
+  --Icon-size--large: 40px;
+  --Icon-size--medium: 32px;
+  --Icon-size--small: 24px;
+  --Icon-size--xSmall: 16px;
+
+  /**
+  * Avatar
+   */
+  --Avatar-size--xSmall: 16px;
+  --Avatar-size--small: 24px;
+  --Avatar-size--medium: 36px;
+  --Avatar-size--large: 48px;
+
+  /**
+  * Global Button Styles
+  */
+  --Button-borderRadius: 4px;
+
+  /**
+  * Buttons
+   */
+  --Button-borderColor: transparent;
+  --Button-borderWidth: 1px;
+  --Button-borderRadius: var(--Button-borderRadius);
+  --Button-letterSpacing: 0.0892857143em;
+  --Button-color: var(--color--blue800);
+  --Button--disabled-opacity: 0.4;
+
+  /* Primary button */
+  --Button--primary-borderColor: var(--color--blue700);
+  --Button--primary-borderWidth: 1px;
+  --Button--primary-color: var(--color--white);
+  --Button--primary-backgroundColor: var(--color--blue700);
+  --Button--primary-backgroundColor-hover: var(--color--blue900);
+  --Button--primary-backgroundColor-active: var(--color--blue800);
+
+  /* Secondary button */
+  --Button--secondary-borderColor: var(--color--blue700);
+  --Button--secondary-borderWidth: 1px;
+  --Button--secondary-color: var(--color--blue800);
+  --Button--secondary-backgroundColor: var(--color--grey50);
+
+  /* Text button */
+  --Button--text-borderColor: transparent;
+  --Button--text-borderWidth: 1px;
+  --Button--text-color: var(--color--blue800);
+  --Button--text-backgroundColor: transparent;
+
+  /**
+* Floating Button
+ */
+  --FloatingButton-borderRadius: 50%;
+  --FloatingButton-color: var(--text-color);
+  --FloatingButton-backgroundColor: var(--color--white);
+  --FloatingButton-backgroundColor-hover: var(--color--grey200);
+  --FloatingButton-backgroundColor-active: var(--color--grey400);
+
+  /**
+    Card
+   */
+  --Card-borderColor: var(--color--grey300);
+  --Card-color: var(--color--grey700);
+  --Card-hoverEnterTransition: 0.3s ease-out;
+  --Card-hoverExitTransition: 0.3s ease-in;
+  --Card-clickTransition: 0.15s ease-in;
+
+  /**
+    Chip
+ */
+  --Chip-borderRadius: 32px;
+  --Chip-color: var(--color--blue700);
+  --Chip--disabled-opacity: 0.4;
+
+  /**
+    Color Swatch
+ */
+  --ColorSwatch-outline-color: var(--color--grey500);
+  --ColorSwatch-active-outline-color: var(--color--grey300);
+  --ColorSwatch-size--base: 48px;
+  --ColorSwatch-size--inner: 38px;
+  --ColorSwatch-size--small: 24px;
+  --ColorSwatch-size-inner--small: 22px;
+}

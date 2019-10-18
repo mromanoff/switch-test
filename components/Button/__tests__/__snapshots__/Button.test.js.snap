@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button.vue renders HREF button as A TAG 1`] = `
+Wrapper {
+  "isFunctionalComponent": true,
+}
+`;
+
+exports[`Button.vue renders NUXT button as A TAG 1`] = `
+VueWrapper {
+  "_emitted": Object {},
+  "_emittedByOrder": Array [],
+  "isFunctionalComponent": undefined,
+}
+`;
+
+exports[`Button.vue renders default button 1`] = `
+Wrapper {
+  "isFunctionalComponent": true,
+}
+`;
+
+exports[`Button.vue renders disabled button 1`] = `
+Wrapper {
+  "isFunctionalComponent": true,
+}
+`;
+
+exports[`Button.vue renders full width button 1`] = `
+Wrapper {
+  "isFunctionalComponent": true,
+}
+`;
+
+exports[`Button.vue renders large button 1`] = `
+Wrapper {
+  "isFunctionalComponent": true,
+}
+`;
+
+exports[`Button.vue renders primary button 1`] = `
+Wrapper {
+  "isFunctionalComponent": true,
+}
+`;
+
+exports[`Button.vue renders secondary button 1`] = `
+Wrapper {
+  "isFunctionalComponent": true,
+}
+`;
+
+exports[`Button.vue renders small button 1`] = `
+Wrapper {
+  "isFunctionalComponent": true,
+}
+`;
+
+exports[`Button.vue renders text button 1`] = `
+Wrapper {
+  "isFunctionalComponent": true,
+}
+`;

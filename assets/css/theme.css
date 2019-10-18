@@ -1,0 +1,139 @@
+/**
+ * Theme definition
+ *
+ * This defines the theme in fundamental terms, but not how it is applied to
+ * the components. That is done in `theme-map.css`.
+ */
+
+/*
+calc will not work with @custom-media
+https://stackoverflow.com/questions/23667208/calc-not-working-within-media-queries
+*/
+@custom-media --viewport--xSmall (min-width: 0) and (max-width: 320px);
+@custom-media --viewport--small (min-width: 0) and (max-width: 767px);
+@custom-media --viewport--medium (min-width: 768px) and (max-width: 1199px);
+@custom-media --viewport--large (min-width: 1200px);
+@custom-media --viewport--medium-up (min-width: 768px);
+@custom-media --viewport--large-up (min-width: 1200px);
+
+:root {
+  /**
+ * Breakpoints
+ */
+  --breakpoint--small: 375px;
+  --breakpoint--medium: 768px;
+  --breakpoint--large: 1200px;
+
+  /**
+  * Colors
+  */
+  /* Blues */
+  --color--blue900: #1c507f;
+  --color--blue800: #2367a5;
+  --color--blue700: #2978be;
+  --color--blue600: #398bd3;
+  --color--blue500: #3991de;
+  --color--blue400: #3498ef;
+  --color--blue300: #76bfff;
+  --color--blue200: #a9d7ff;
+  --color--blue100: #d3eaff;
+  --color--blue50: #e3f2ff;
+
+  /* Greys */
+  --color--grey900: #12191f;
+  --color--grey800: #222e39;
+  --color--grey700: #485764;
+  --color--grey600: #788a9a;
+  --color--grey500: #98aec1;
+  --color--grey400: #b4c8da;
+  --color--grey300: #d5e2ed;
+  --color--grey200: #e0e9f2;
+  --color--grey100: #ecf2f7;
+  --color--grey50: #f7f9fa;
+
+  /* Green */
+  --color--green700: #4db45d;
+  --color--green500: #67e37a;
+  --color--green300: #95f0a3;
+
+  /* Orange */
+  --color--orange700: #ff7600;
+  --color--orange500: #ff8f3c;
+  --color--orange300: #ffccac;
+
+  /* Red */
+  --color--red700: #de3838;
+  --color--red500: #ff5757;
+  --color--red300: #ff8e8e;
+
+  /* Yellow */
+  --color--yellow700: #edbd00;
+  --color--yellow600: #ffcb00;
+  --color--yellow500: #ffd63c;
+  --color--yellow400: #ffe374;
+  --color--yellow300: #ffeeac;
+  --color--yellow200: #fff5cf;
+  --color--yellow100: #fffae7;
+
+  /* base colors */
+  --color--white: #fff;
+  --color--black: var(--color--grey800);
+
+  /* other */
+  --color--error: var(--color--red700);
+  --color--info: var(--color--blue300);
+  --color--success: var(--color--green500);
+
+  /* Base */
+  --text-color: var(--color--black);
+  --background-color: var(--color--white);
+  --link-color: var(--color--blue700);
+  --link-color--onHover: color-mod(var(--color--blue900) alpha(-30%));
+
+  /**
+* Fonts
+*/
+  --font-size: 16px;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --font-family--header: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  --line-height: 1.4;
+
+  /**
+ * Font Size
+ */
+  --font-size--xxSmall: 0.65rem; /* 10px */
+  --font-size--xSmall: 0.75rem; /* 12px */
+  --font-size--small: 0.875rem; /* 14px */
+  --font-size--medium: 1rem; /* 16px */
+  --font-size--large: 1.125rem; /* 18px */
+  --font-size--xLarge: 1.5rem; /* 24px */
+  --font-size--xxLarge: 1.75rem; /* 28px */
+  --font-size--xxxLarge: 3rem; /* 48px */
+
+  /**
+ * Font Weight
+ */
+  --font-weight--lighter: 200;
+  --font-weight--light: 300;
+  --font-weight--normal: 400;
+  --font-weight--medium: 500;
+  --font-weight--bold: 700;
+
+  /**
+ * Spacing
+ */
+  --space--xSmall: 0.25rem; /* 4px */
+  --space--small: 0.5rem; /* 8px */
+  --space--medium: 1rem; /* 16px */
+  --space--large: 1.5rem; /* 24px */
+  --space--xLarge: 2rem; /* 32px */
+  --space--xxLarge: 4rem; /* 48px  */
+
+  /**
+ * Z index
+ */
+  --z-index--low: 100;
+  --z-index--medium: 200;
+  --z-index--high: 300;
+}

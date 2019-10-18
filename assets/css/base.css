@@ -1,0 +1,327 @@
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/**
+ * Expose break point to javascript:
+ * TODO: don't rely on this. EI 11 and Safari is not supporting this yet.
+ * use html::before {content: 'mobile'} etc.
+ */
+:root {
+  --device-at-current-break-point: small;
+}
+
+@media (--viewport--medium) {
+  :root {
+    --device-at-current-break-point: medium;
+  }
+}
+
+@media (--viewport--large-up) {
+  :root {
+    --device-at-current-break-point: large;
+  }
+}
+
+/*
+ * Base styles
+ * ========================================================================== */
+
+html {
+  -webkit-font-smoothing: antialiased;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  height: 100%;
+}
+
+/* Before poking around here
+    read this: https://www.smashingmagazine.com/2018/08/scroll-bouncing-websites/
+*/
+body {
+  min-width: 320px;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+address {
+  font-style: normal;
+}
+
+/* offset 1px image of the screen. it create unwanted spacing */
+body > img[width='1'] {
+  position: absolute;
+  left: -9999rem;
+}
+
+body::before {
+  content: 'small';
+  display: none;
+}
+
+@media (--viewport--medium) {
+  body::before {
+    content: 'medium';
+    display: none;
+  }
+}
+
+@media (--viewport--large-up) {
+  body::before {
+    content: 'large';
+    display: none;
+  }
+}
+
+/* lock content, disable scrolling */
+body.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.5em;
+  font-family: var(--font-family--header);
+  line-height: var(--line-height);
+}
+
+h4,
+h5,
+h6 {
+  margin: 0 0 0.5em;
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+}
+
+h1 {
+  font-size: var(--font-size--xLarge);
+  font-weight: var(--font-weight--bold);
+  margin-bottom: calc(var(--font-size--xLarge) / var(--line-height));
+}
+
+@media (--viewport--medium-up) {
+  h1 {
+    font-size: var(--font-size--xxLarge);
+    margin-bottom: calc(var(--font-size--xxLarge) / var(--line-height));
+  }
+}
+
+h2 {
+  font-size: var(--font-size--xLarge);
+  font-weight: var(--font-weight--medium);
+  margin-bottom: calc(var(--font-size--xLarge) / var(--line-height));
+}
+
+h3 {
+  font-size: var(--font-size--large);
+  font-weight: var(--font-weight--bold);
+  margin-bottom: calc(var(--font-size--large) / var(--line-height));
+}
+
+h4 {
+  font-size: var(--font-size--medium);
+  font-weight: var(--font-weight--bold);
+  margin-bottom: calc(var(--font-size--xSmall) / var(--line-height));
+}
+
+h5 {
+  font-size: var(--font-size--small);
+  font-weight: var(--font-weight--bold);
+}
+
+small,
+.font-small {
+  font-size: var(--font-size--small);
+}
+
+p {
+  margin-bottom: 1em;
+  line-height: var(--line-height);
+}
+
+a:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 100ms ease-in-out;
+}
+
+a:hover {
+  color: var(--link-color--onHover);
+  text-decoration: underline;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  line-height: 1;
+  font-family: var(--font-family);
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid currentColor;
+  margin: 1em 0;
+  padding: 0;
+  opacity: 0.4;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color--grey400);
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/*
+ * Print styles
+ * Inlined to avoid the additional HTTP request:
+ * http://www.phpied.com/delay-loading-your-print-css/
+ * ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster: http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: ' (' attr(href) ')';
+  }
+
+  abbr[title]::after {
+    content: ' (' attr(title) ')';
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^='#']::after,
+  a[href^='javascript:']::after {
+    content: '';
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* hide inline svg icons-sprite */
+body > svg:first-child {
+  display: none;
+}
+
+input {
+  border-radius: 0;
+}
+
+/* Remove the default button styling in all browsers */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border-style: none;
+  color: inherit;
+}
