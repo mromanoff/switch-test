@@ -35,7 +35,6 @@ export default {
 
 .SdMenu-link {
   & a:any-link {
-    margin-top: -2px;
     text-decoration: none;
     color: var(--Header-linkColor);
     cursor: pointer;
@@ -45,6 +44,7 @@ export default {
     min-height: 42px;
     padding-left: var(--space--medium);
     padding-right: var(--space--medium);
+    border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
   }
 
