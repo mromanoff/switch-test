@@ -1,6 +1,7 @@
 <template>
   <sd-container>
     <template slot="main">
+      <sd-search :benefits="benefits" />
       <sd-theme-select />
       <div class="Container-cardList">
         <sd-card v-for="benefit in benefits" :key="benefit.title">
@@ -21,12 +22,14 @@ import { mapState } from 'vuex';
 import SdContainer from '~/components/SdContainer';
 import SdCard from '~/components/SdCard';
 import SdThemeSelect from '~/components/SdThemeSelect';
+import SdSearch from '~/components/SdSearch';
 
 export default {
   components: {
     SdContainer,
     SdCard,
     SdThemeSelect,
+    SdSearch,
   },
 
   computed: {
