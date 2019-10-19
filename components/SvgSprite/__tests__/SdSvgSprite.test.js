@@ -1,8 +1,8 @@
 import { shallowMount } from '@vue/test-utils';
-import VhSvgSprite from '../SvgSprite.vue';
+import SdSvgSprite from '../SvgSprite.vue';
 
-describe('VhSvgSprite.vue', () => {
-  const wrapper = shallowMount(VhSvgSprite);
+describe('SdSvgSprite.vue', () => {
+  const wrapper = shallowMount(SdSvgSprite);
 
   it('renders svg sprite', () => {
     expect(wrapper.is('svg')).toBe(true);

@@ -2,13 +2,25 @@
 
 > Switch Code Challenge
 
+## Description
+
+This is Universal App. First load is Server Side Render and after is Client Side render.
+* Use Routing with page transition
+* Use Vuex Store Module  (Benefits)
+* Use Axios to fetch data
+* Use PostCSS based on SUITCSS and BEM methodology https://suitcss.github.io/ 
+* Use Prittier and ESlint. Added Husky pre-commit hooks
+* Use Jest for unit test, snapshots and code coverage
+
+
+
 ## Build Setup
 
 ``` bash
 # install dependencies
 $ npm run install
 
-# serve with hot reload at localhost:3000
+# serve with hot reload at http://localhost:3000
 $ npm run dev
 
 # build for production and launch server
@@ -17,4 +29,3 @@ $ npm run start
 
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
