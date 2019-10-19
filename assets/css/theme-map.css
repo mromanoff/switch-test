@@ -14,7 +14,7 @@
  * Footer
  */
   --Footer-color: var(--color--white);
-  --Footer-backgroundColor: var(--color--blue700);
+  --Footer-backgroundColor: var(--color--black);
   --Footer-link: var(--color--white);
   --Footer-onHover-link: var(--color--white);
   --Footer-fontSize: var(--font-size--small);

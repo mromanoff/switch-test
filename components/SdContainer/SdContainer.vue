@@ -24,6 +24,7 @@ export default {
   margin-left: auto;
   margin-right: auto;
   padding: 0 var(--space--medium);
+  width: 100%;
 }
 
 .SdContainer-main {
