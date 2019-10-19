@@ -1,6 +1,7 @@
 <template>
   <sd-container>
     <template slot="main">
+      <sd-theme-select />
       <div class="Container-cardList">
         <sd-card v-for="benefit in benefits" :key="benefit.title">
           <template slot="title">
@@ -19,11 +20,13 @@
 import { mapState } from 'vuex';
 import SdContainer from '~/components/SdContainer';
 import SdCard from '~/components/SdCard';
+import SdThemeSelect from '~/components/SdThemeSelect';
 
 export default {
   components: {
     SdContainer,
     SdCard,
+    SdThemeSelect,
   },
 
   computed: {

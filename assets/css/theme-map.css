@@ -4,7 +4,7 @@
    */
   --Header-color: var(--color--white);
   --Header-backgroundColor: var(--color--black);
-  --Header-linkColor: var(--link-color);
+  --Header-linkColor: var(--link-white);
   --Header-onHover-linkColor: var(--link-color--onHover);
   --Header--mobile-height: 80px;
   --Header--tablet-height: 60px;
@@ -91,7 +91,7 @@
   --Button-borderWidth: 1px;
   --Button-borderRadius: var(--Button-borderRadius);
   --Button-letterSpacing: 0.0892857143em;
-  --Button-color: var(--color--blue800);
+  --Button-color: var(--color--black);
   --Button--disabled-opacity: 0.4;
 
   /* Primary button */

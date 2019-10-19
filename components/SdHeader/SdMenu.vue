@@ -37,7 +37,7 @@ export default {
   & a:any-link {
     margin-top: -2px;
     text-decoration: none;
-    color: var(--color--white);
+    color: var(--Header-linkColor);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -49,7 +49,9 @@ export default {
   }
 
   & a:hover {
-    border-bottom: 4px solid var(--color--red700);
+    border-bottom: 4px solid var(--color--grey700);
+    background-color: rgba(150, 150, 150, 0.3);
+    transition: background 200ms ease-in-out, borderColor 200ms ease-in-out;
   }
 
   & a.nuxt-link-exact-active {

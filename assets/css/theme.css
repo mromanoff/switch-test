@@ -138,3 +138,22 @@ https://stackoverflow.com/questions/23667208/calc-not-working-within-media-queri
   --z-index--medium: 200;
   --z-index--high: 300;
 }
+
+
+/* Invert Theme a bit sloppy due time crunch */
+:root[theme='dark'] {
+  --color--white: var(--color--grey800);
+  --color--black: #fff;
+  --color--grey400:  #485764;
+
+  --background-color: var(--color--grey700);
+  --link-color: var(--color--blue700);
+  --link-color--onHover: color-mod(var(--color--blue900) alpha(-30%));
+
+  --Header-backgroundColor: var(--color--grey900);
+  --Header-Color: var(--color--white);
+  --Header-linkColor: var(--color--grey100);
+
+  --Footer-backgroundColor: var(--color--grey900);
+  --Footer-color: var(--color--grey100);
+}

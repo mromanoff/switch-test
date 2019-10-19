@@ -25,14 +25,10 @@ export default {
   margin-right: auto;
   display: grid;
   grid-template-columns: 1fr;
-}
-
-@media (--viewport--medium-up) {
-  .SdFooter-container {
-    max-width: var(--breakpoint--xLarge);
-    grid-template-rows: var(--Footer--mobile-height);
-    align-items: center;
-    justify-content: center;
-  }
+  align-items: center;
+  justify-content: center;
+  max-width: var(--breakpoint--xLarge);
+  grid-template-rows: var(--Footer--mobile-height);
+  padding: 0 var(--space--medium);
 }
 </style>
