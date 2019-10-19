@@ -6,8 +6,9 @@
   --Header-backgroundColor: var(--color--black);
   --Header-linkColor: var(--link-color);
   --Header-onHover-linkColor: var(--link-color--onHover);
-  --Header--mobile-height: 96px;
-  --Header--desktop-height: 100px;
+  --Header--mobile-height: 80px;
+  --Header--tablet-height: 60px;
+  --Header--desktop-height: 60px;
 
   /**
  * Footer

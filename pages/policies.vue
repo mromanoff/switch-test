@@ -1,13 +1,16 @@
 <template>
-  <div class="Container">
-    <main class="Container-main">
-      <h1>Policies</h1>
-    </main>
-  </div>
+  <sd-container>
+    <template slot="main">
+      <h1 class="PageTitle">Policies</h1>
+    </template>
+  </sd-container>
 </template>
 
 <script>
-export default {};
+import SdContainer from '~/components/SdContainer';
+export default {
+  components: {
+    SdContainer,
+  },
+};
 </script>
-
-<style></style>

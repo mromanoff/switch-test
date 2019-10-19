@@ -12,8 +12,8 @@ https://stackoverflow.com/questions/23667208/calc-not-working-within-media-queri
 @custom-media --viewport--xSmall (min-width: 0) and (max-width: 320px);
 @custom-media --viewport--small (min-width: 0) and (max-width: 767px);
 @custom-media --viewport--medium (min-width: 768px) and (max-width: 1199px);
-@custom-media --viewport--large (min-width: 1200px);
 @custom-media --viewport--medium-up (min-width: 768px);
+@custom-media --viewport--large (min-width: 1200px) and (max-width: 1799px);
 @custom-media --viewport--large-up (min-width: 1200px);
 
 :root {
@@ -23,6 +23,7 @@ https://stackoverflow.com/questions/23667208/calc-not-working-within-media-queri
   --breakpoint--small: 375px;
   --breakpoint--medium: 768px;
   --breakpoint--large: 1200px;
+  --breakpoint--xLarge: 1800px;
 
   /**
   * Colors
@@ -62,7 +63,7 @@ https://stackoverflow.com/questions/23667208/calc-not-working-within-media-queri
   --color--orange300: #ffccac;
 
   /* Red */
-  --color--red700: #de3838;
+  --color--red700: #d81921;
   --color--red500: #ff5757;
   --color--red300: #ff8e8e;
 

@@ -1,29 +1,17 @@
 <template>
   <div class="SdCard">
-    <div class="SdCard-header">
-      {{ title }}
-    </div>
-    <div class="SdCard-content">
-      {{ description }}
-    </div>
+    <h4 class="SdCard-header">
+      <slot name="title"></slot>
+    </h4>
+    <p class="SdCard-content">
+      <slot></slot>
+    </p>
   </div>
 </template>
 
 <script>
 export default {
   name: 'SdCard',
-
-  props: {
-    title: {
-      type: String,
-      default: '',
-    },
-
-    description: {
-      type: String,
-      default: '',
-    },
-  },
 };
 </script>
 
@@ -39,6 +27,7 @@ export default {
   color: var(--color--white);
   padding: var(--space--small) var(--space--medium);
   font-weight: 600;
+  margin: 0;
 }
 
 .SdCard-content {

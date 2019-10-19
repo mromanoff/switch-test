@@ -14,7 +14,8 @@ export const mutations = {
 export const actions = {
   async getBenefits({ commit }) {
     try {
-      const { data } = await axios.get('http://localhost:3000/data/benefits.json');
+      const { data } = await axios.get('http://localhost:3000/api/benefits.json');
+
       commit(SET_BENEFITS, data.benefits);
     } catch (err) {
       commit(SET_BENEFITS, []);

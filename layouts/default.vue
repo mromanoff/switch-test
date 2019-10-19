@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <sd-header />
+  <div class="App">
     <svg-sprite />
-    <nuxt />
+    <sd-header class="App-header" />
+    <transition name="fade">
+      <nuxt />
+    </transition>
   </div>
 </template>
 
@@ -18,4 +20,21 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.App {
+  /*BLOCK*/
+}
+
+.App-header {
+  margin-bottom: var(--space--xLarge);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

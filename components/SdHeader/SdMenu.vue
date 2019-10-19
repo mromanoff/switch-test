@@ -35,6 +35,7 @@ export default {
 
 .SdMenu-link {
   & a:any-link {
+    margin-top: -2px;
     text-decoration: none;
     color: var(--color--white);
     cursor: pointer;
@@ -44,14 +45,23 @@ export default {
     min-height: 42px;
     padding-left: var(--space--medium);
     padding-right: var(--space--medium);
-    border-bottom: 3px solid transparent;
+    border-bottom: 4px solid transparent;
   }
 
   & a:hover {
-    border-bottom: 3px solid var(--color--red700);
+    border-bottom: 4px solid var(--color--red700);
+  }
+
+  & a.nuxt-link-exact-active {
+    border-bottom: 4px solid var(--color--red700);
   }
 }
 
 @media (--viewport--medium-up) {
+  .SdMenu-link {
+    & a:any-link {
+      height: var(--Header--tablet-height);
+    }
+  }
 }
 </style>
