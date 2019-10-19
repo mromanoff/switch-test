@@ -1,35 +1,40 @@
 <template>
   <div class="Container">
     <main class="Container-main">
-      <h1>Title H1</h1>
-      <h2>Title H2</h2>
-      <Icon size="small" name="car" />
-      <Button type="submit" variation="primary" size="large">Submit Button</Button>
+      <div class="Container-cardList">
+        <sd-card v-for="benefit in benefits" :key="benefit.title" :title="benefit.title" :description="benefit.description" />
+      </div>
     </main>
-    <aside class="Container-aside">
-      aside
-    </aside>
   </div>
 </template>
 
 <script>
-import Button from '~/components/Button';
-import Icon from '~/components/Icon';
+import { mapState } from 'vuex';
+import SdCard from '~/components/SdCard';
 export default {
   components: {
-    Button,
-    Icon,
+    SdCard,
+  },
+
+  computed: {
+    ...mapState({
+      benefits: (state) => state.benefits.benefits,
+    }),
+  },
+
+  async fetch({ store }) {
+    await store.dispatch('benefits/getBenefits');
   },
 };
 </script>
 
-<style>
+<style scoped>
 .Container {
   display: flex;
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 var(--space--medium);
+  padding: var(--space--xLarge) var(--space--large);
   min-height: 100vh;
   /*background: var(--color--green500);*/
 }
@@ -37,16 +42,6 @@ export default {
 .Container-main {
   flex: 1 1 100%;
   width: 100%;
-}
-
-.Container-aside {
-  max-width: var(--aside--width);
-  flex: 0 0 var(--aside--width);
-  margin-bottom: var(--space--large);
-}
-
-.Container-aside:empty {
-  display: none;
 }
 
 @media (--viewport--medium) {
@@ -67,6 +62,26 @@ export default {
     width: var(--breakpoint--large);
     padding: 0;
     /*background: var(--color--orange500);*/
+  }
+}
+
+.Container-cardList {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: var(--space--large);
+}
+
+@media (--viewport--medium) {
+  .Container-cardList {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: var(--space--large);
+  }
+}
+
+@media (--viewport--large) {
+  .Container-cardList {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: var(--space--large);
   }
 }
 </style>

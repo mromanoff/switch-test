@@ -77,7 +77,7 @@ https://stackoverflow.com/questions/23667208/calc-not-working-within-media-queri
 
   /* base colors */
   --color--white: #fff;
-  --color--black: var(--color--grey800);
+  --color--black: #000;
 
   /* other */
   --color--error: var(--color--red700);
@@ -86,7 +86,7 @@ https://stackoverflow.com/questions/23667208/calc-not-working-within-media-queri
 
   /* Base */
   --text-color: var(--color--black);
-  --background-color: var(--color--white);
+  --background-color: var(--color--grey200);
   --link-color: var(--color--blue700);
   --link-color--onHover: color-mod(var(--color--blue900) alpha(-30%));
 

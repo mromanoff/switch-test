@@ -3,11 +3,11 @@
    * Header
    */
   --Header-color: var(--color--white);
-  --Header-backgroundColor: var(--color--blue700);
+  --Header-backgroundColor: var(--color--black);
   --Header-linkColor: var(--link-color);
   --Header-onHover-linkColor: var(--link-color--onHover);
-  --Header--mobile-height: 48px;
-  --Header--desktop-height: 48px;
+  --Header--mobile-height: 96px;
+  --Header--desktop-height: 100px;
 
   /**
  * Footer

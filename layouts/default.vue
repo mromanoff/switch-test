@@ -1,5 +1,6 @@
 <template>
   <div>
+    <sd-header />
     <svg-sprite />
     <nuxt />
   </div>
@@ -7,9 +8,11 @@
 
 <script>
 import SvgSprite from '~/components/SvgSprite';
+import SdHeader from '~/components/SdHeader';
 
 export default {
   components: {
+    SdHeader,
     SvgSprite,
   },
 };
