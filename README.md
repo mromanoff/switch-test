@@ -27,6 +27,7 @@ $ npm run install
 
 # serve with hot reload at http://localhost:3000
 $ npm run dev
+$ npm run test
 
 # build for production and launch server
 $ npm run build
