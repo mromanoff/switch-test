@@ -6,8 +6,9 @@
       <h2>&copy;oded by Michael Romanoff on 10/20/2019</h2>
 
       <div class="Module">
-        <p>This is Universal App. First load is Server Side Render and after is Client Side render.</p>
+        <p>This is Universal App. First load is SSR (Server Side render) and after Client Side.</p>
         <ul class="List List--disc">
+          <li>Site has 3 breakpoints. Small 375, Medium 768 - 1199, Large 1200 +</li>
           <li>Use Routing with page transition</li>
           <li>Use Vuex Store Module (Benefits)</li>
           <li>Use Axios to fetch data</li>
@@ -28,8 +29,8 @@
       <div class="Module">
         <p>On Benefits Page:</p>
         <ul class="List List--disc">
-          <li>Theme Selector (currently is not persistent, state could be saved to cookie or localstorage)</li>
-          <li>Search Filter Benefits. On select route to stand along page.</li>
+          <li>User can change color Theme. Theme Selector (currently is not persistent, user selected state should be saved with cookie or localstorage)</li>
+          <li>User can Search and Filter Benefits within Search Box. On select user will be taking to benefit page.</li>
         </ul>
       </div>
     </template>

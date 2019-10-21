@@ -1,13 +1,14 @@
 <template>
   <sd-container class="BenefitsPage">
     <template slot="main">
-      <div class="Benefits-themeSelect">
-        <span>Change Theme Color</span>
-        <sd-theme-select />
+      <div class="BenefitsPage-toolbox">
+        <div class="Benefits-themeSelect">
+          <span>Change Theme Color</span>
+          <sd-theme-select />
+        </div>
+
+        <sd-search v-model="selectedBenefit" class="Benefits-searchFilter" :options="benefitsSearchOptions" />
       </div>
-
-      <sd-search v-model="selectedBenefit" class="Benefits-searchFilter" :options="benefitsSearchOptions" />
-
       <h1 class="PageTitle">{{ benefit.title }}</h1>
       <p>{{ benefit.description }}</p>
     </template>
@@ -69,7 +70,28 @@ export default {
   /* BLOCK */
 }
 
+.BenefitsPage-toolbox {
+  display: grid;
+  grid-template-rows: auto;
+  grid-column-gap: var(--space--large);
+  grid-template-areas:
+    'theme'
+    'benefit';
+  margin-bottom: var(--space--xLarge);
+
+  @media (--viewport--medium) {
+    grid-template-areas: 'benefit theme';
+    grid-column-gap: var(--space--medium);
+  }
+
+  @media (--viewport--large-up) {
+    grid-template-areas: 'benefit . . theme';
+    grid-column-gap: var(--space--medium);
+  }
+}
+
 .Benefits-themeSelect {
+  grid-area: theme;
   display: flex;
   margin-bottom: var(--space--medium);
   align-items: center;
@@ -82,26 +104,7 @@ export default {
 }
 
 .Benefits-searchFilter {
+  grid-area: benefit;
   margin-bottom: var(--space--medium);
-}
-
-.Benefits-cardList {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: var(--space--large);
-}
-
-@media (--viewport--medium) {
-  .Benefits-cardList {
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: var(--space--large);
-  }
-}
-
-@media (--viewport--large-up) {
-  .Benefits-cardList {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: var(--space--large);
-  }
 }
 </style>
