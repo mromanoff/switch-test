@@ -24,7 +24,7 @@
         </ul>
       </div>
 
-      <p>NOTE: all magic happening on Benefits page. Other page are place holders</p>
+      <p>NOTE: all magic happening on Benefits page. Other pages are placeholders</p>
 
       <div class="Module">
         <p>On Benefits Page:</p>
