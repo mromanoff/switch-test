@@ -1,7 +1,7 @@
 <template>
   <footer class="SdFooter">
     <div class="SdFooter-container">
-      &copy; 2019 Michael Romanoff
+      &copy;ode by Michael Romanoff 10/20/2019
     </div>
   </footer>
 </template>
@@ -18,6 +18,7 @@ export default {
   color: var(--Footer-color);
   height: var(--Footer--mobile-height);
   margin-top: var(--space--xxLarge);
+  font-size: var(--font-size--xSmall);
 }
 
 .SdFooter-container {

@@ -88,8 +88,8 @@ https://stackoverflow.com/questions/23667208/calc-not-working-within-media-queri
   /* Base */
   --text-color: var(--color--black);
   --background-color: var(--color--grey200);
-  --link-color: var(--color--blue700);
-  --link-color--onHover: color-mod(var(--color--blue900) alpha(-30%));
+  --link-color: var(--color--red700);
+  --link-color--onHover: color-mod(var(--color--red700) alpha(-30%));
 
   /**
 * Fonts

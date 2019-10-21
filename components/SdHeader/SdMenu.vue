@@ -2,7 +2,7 @@
   <nav class="SdMenu">
     <ul class="SdMenu-links">
       <li class="SdMenu-link">
-        <nuxt-link to="/">Benefits</nuxt-link>
+        <nuxt-link to="/benefits">Benefits</nuxt-link>
       </li>
       <li class="SdMenu-link">
         <nuxt-link to="/safety">Safety</nuxt-link>

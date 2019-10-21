@@ -12,6 +12,8 @@ This is Universal App. First load is Server Side Render and after is Client Side
 * Use CSS Flex box and CSS Grid properties
 * Use Prittier and ESlint. Added Husky pre-commit hooks
 * Use Jest for unit test, snapshots and code coverage
+* Implement Search filter
+* Use common, functional and template less components
 
 
 

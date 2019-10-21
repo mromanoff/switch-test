@@ -32,9 +32,8 @@ export default {
 </script>
 <style scoped>
 .SdThemeSelector {
+  /* BLOCK */
   display: flex;
-  padding: var(--space--medium) 0;
-  justify-content: flex-end;
 }
 
 .SdThemeSelector-button:first-child {
