@@ -26,7 +26,8 @@
     "nuxt": "^2.0.0",
     "suitcss-base": "^5.0.0",
     "suitcss-components-button": "^6.0.2",
-    "suitcss-components-form": "^1.0.1"
+    "suitcss-components-form": "^1.0.1",
+    "vuedraggable": "^2.23.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
