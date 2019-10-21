@@ -12,22 +12,29 @@
         <sd-search v-model="selectedBenefit" class="Benefits-searchFilter" :options="benefitsSearchOptions" />
       </div>
 
-      <div class="Benefits-cardList">
+      <draggable v-model="benefits" class="Benefits-cardList">
         <sd-card v-for="benefit in benefits" :key="benefit.title">
           <template slot="title">
             {{ benefit.title }}
+            <svg class="contact-list-handle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M14 4h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zM8 4h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm6 6h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm-6 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm6 6h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm-6 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z"
+              />
+            </svg>
           </template>
           <template>
             {{ benefit.description }}
           </template>
         </sd-card>
-      </div>
+      </draggable>
     </template>
   </sd-container>
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
+import { mapGetters } from 'vuex';
+import draggable from 'vuedraggable';
 import SdContainer from '~/components/SdContainer';
 import SdCard from '~/components/SdCard';
 import SdThemeSelect from '~/components/SdThemeSelect';
@@ -39,6 +46,7 @@ export default {
     SdCard,
     SdThemeSelect,
     SdSearch,
+    draggable,
   },
 
   data() {
@@ -48,9 +56,14 @@ export default {
   },
 
   computed: {
-    ...mapState({
-      benefits: (state) => state.benefits.benefits,
-    }),
+    benefits: {
+      get() {
+        return this.$store.state.benefits.benefits;
+      },
+      set(value) {
+        this.$store.commit('benefits/UPDATE_BENEFITS', value);
+      },
+    },
 
     ...mapGetters({
       benefitsSearchOptions: 'benefits/benefitsSearchOptions',

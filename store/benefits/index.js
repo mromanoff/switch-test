@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { SET_BENEFITS, SET_BENEFIT } from '~/store/mutationTypes';
+import { SET_BENEFITS, SET_BENEFIT, UPDATE_BENEFITS } from '~/store/mutationTypes';
 
 export const state = () => ({
   benefits: [],
@@ -14,6 +14,10 @@ export const getters = {
 
 export const mutations = {
   [SET_BENEFITS](state, data) {
+    state.benefits = data;
+  },
+
+  [UPDATE_BENEFITS](state, data) {
     state.benefits = data;
   },
 
