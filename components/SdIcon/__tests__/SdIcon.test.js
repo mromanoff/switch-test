@@ -1,25 +1,27 @@
 import { shallowMount } from '@vue/test-utils';
-import SdIcon from '../SdIcon.vue';
+import Icon from '../SdIcon.vue';
 
-describe('SdIcon.vue', () => {
+describe('Icon.vue', () => {
   let wrapper;
+  let options;
 
   beforeEach(() => {
-    wrapper = shallowMount(SdIcon, {
-      context: {
-        props: { size: 'medium' },
+    options = {
+      propsData: {
+        name: 'car',
       },
-    });
+    };
+    wrapper = shallowMount(Icon, options);
   });
 
-  it('renders default SdIcon', () => {
-    expect(wrapper.is('button')).toBe(true);
-    expect(wrapper.classes()).toStrictEqual(['VhButton', 'VhButton--medium']);
+  it('renders default Icon', () => {
+    expect(wrapper.is('svg')).toBe(true);
+    expect(wrapper.classes()).toStrictEqual(['SdIcon', 'SdIcon--medium', 'SdIcon--default']);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('renders modified SdIcon', () => {
-    wrapper = shallowMount(SdIcon, {
+  it('renders modified Icon', () => {
+    wrapper = shallowMount(Icon, {
       propsData: {
         name: 'Test Name',
         color: 'red',

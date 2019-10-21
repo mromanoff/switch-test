@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SdIcon.vue renders modified SdIcon 1`] = `
+exports[`Icon.vue renders default Icon 1`] = `
+VueWrapper {
+  "_emitted": Object {},
+  "_emittedByOrder": Array [],
+  "isFunctionalComponent": undefined,
+}
+`;
+
+exports[`Icon.vue renders modified Icon 1`] = `
 VueWrapper {
   "_emitted": Object {},
   "_emittedByOrder": Array [],

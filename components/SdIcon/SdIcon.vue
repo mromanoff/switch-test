@@ -1,12 +1,12 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" class="VhIcon" :class="computedClasses" role="presentation">
+  <svg xmlns="http://www.w3.org/2000/svg" class="SdIcon" :class="computedClasses" role="presentation">
     <use v-bind="{ 'xlink:href': `#${name}` }" />
   </svg>
 </template>
 
 <script>
 export default {
-  name: 'VhIcon',
+  name: 'SdIcon',
   props: {
     /**
      *  One of these colors: lightGrey, grey, darkGrey, lightBlue, blue, darkBlue, lightRed, red, darkRed, lightOrange, orange, darkOrange, lightYellow, yellow, darkYellow, lightGreen, green, darkGreen, white
@@ -42,8 +42,8 @@ export default {
   computed: {
     computedClasses() {
       return {
-        [`VhIcon--${this.size}`]: this.size,
-        [`VhIcon--${this.color}`]: this.color,
+        [`SdIcon--${this.size}`]: this.size,
+        [`SdIcon--${this.color}`]: this.color,
       };
     },
   },
@@ -53,120 +53,120 @@ export default {
 <style>
 /* https://material.io/design/iconography/system-icons.html#system-icon-metrics */
 
-.VhIcon {
+.SdIcon {
   display: block;
-  width: var(--VhIcon-size--medium);
-  height: var(--VhIcon-size--medium);
-  font-size: var(--VhIcon-size--medium);
+  width: var(--Icon-size--medium);
+  height: var(--Icon-size--medium);
+  font-size: var(--Icon-size--medium);
   user-select: none;
   flex-shrink: 0;
 }
 
 /* icons sizes */
 
-.VhIcon--xSmall {
-  width: var(--VhIcon-size--xSmall);
-  height: var(--VhIcon-size--xSmall);
+.SdIcon--xSmall {
+  width: var(--Icon-size--xSmall);
+  height: var(--Icon-size--xSmall);
 }
 
-.VhIcon--small {
-  width: var(--VhIcon-size--small);
-  height: var(--VhIcon-size--small);
+.SdIcon--small {
+  width: var(--Icon-size--small);
+  height: var(--Icon-size--small);
 }
 
-.VhIcon--medium {
-  width: var(--VhIcon-size--medium);
-  height: var(--VhIcon-size--medium);
+.SdIcon--medium {
+  width: var(--Icon-size--medium);
+  height: var(--Icon-size--medium);
 }
 
-.VhIcon--large {
-  width: var(--VhIcon-size--large);
-  height: var(--VhIcon-size--large);
+.SdIcon--large {
+  width: var(--Icon-size--large);
+  height: var(--Icon-size--large);
 }
 
-.VhIcon--xLarge {
-  width: var(--VhIcon-size--xLarge);
-  height: var(--VhIcon-size--xLarge);
+.SdIcon--xLarge {
+  width: var(--Icon-size--xLarge);
+  height: var(--Icon-size--xLarge);
 }
 
 /* COLORS */
-.VhIcon--default {
+.SdIcon--default {
   fill: currentColor;
 }
 
-.VhIcon--lightOrange {
+.SdIcon--lightOrange {
   fill: var(--color--orange300);
 }
 
-.VhIcon--orange {
+.SdIcon--orange {
   fill: var(--color--orange500);
 }
 
-.VhIcon--darkOrange {
+.SdIcon--darkOrange {
   fill: var(--color--orange700);
 }
 
-.VhIcon--lightGrey {
+.SdIcon--lightGrey {
   fill: var(--color--grey300);
 }
 
-.VhIcon--grey {
+.SdIcon--grey {
   fill: var(--color--grey500);
 }
 
-.VhIcon--darkGrey {
+.SdIcon--darkGrey {
   fill: var(--color--grey700);
 }
 
-.VhIcon--lightBlue {
+.SdIcon--lightBlue {
   fill: var(--color--blue300);
 }
 
-.VhIcon--blue {
+.SdIcon--blue {
   fill: var(--color--blue500);
 }
 
-.VhIcon--darkBlue {
+.SdIcon--darkBlue {
   fill: var(--color--blue700);
 }
 
-.VhIcon--lightRed {
+.SdIcon--lightRed {
   fill: var(--color--red300);
 }
 
-.VhIcon--red {
+.SdIcon--red {
   fill: var(--color--red500);
 }
 
-.VhIcon--darkRed {
+.SdIcon--darkRed {
   fill: var(--color--red700);
 }
 
-.VhIcon--lightYellow {
+.SdIcon--lightYellow {
   fill: var(--color--yellow300);
 }
 
-.VhIcon--yellow {
+.SdIcon--yellow {
   fill: var(--color--yellow500);
 }
 
-.VhIcon--darkYellow {
+.SdIcon--darkYellow {
   fill: var(--color--yellow700);
 }
 
-.VhIcon--lightGreen {
+.SdIcon--lightGreen {
   fill: var(--color--green300);
 }
 
-.VhIcon--green {
+.SdIcon--green {
   fill: var(--color--green500);
 }
 
-.VhIcon--darkGreen {
+.SdIcon--darkGreen {
   fill: var(--color--green700);
 }
 
-.VhIcon--white {
+.SdIcon--white {
   fill: var(--color--white);
 }
 </style>

@@ -16,12 +16,7 @@
         <sd-card v-for="benefit in benefits" :key="benefit.title">
           <template slot="title">
             {{ benefit.title }}
-            <svg class="contact-list-handle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                fill-rule="evenodd"
-                d="M14 4h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zM8 4h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm6 6h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm-6 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm6 6h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm-6 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z"
-              />
-            </svg>
+            <sd-icon name="draggable" size="small" />
           </template>
           <template>
             {{ benefit.description }}
@@ -39,6 +34,7 @@ import SdContainer from '~/components/SdContainer';
 import SdCard from '~/components/SdCard';
 import SdThemeSelect from '~/components/SdThemeSelect';
 import SdSearch from '~/components/SdSearch';
+import SdIcon from '~/components/SdIcon';
 
 export default {
   components: {
@@ -47,6 +43,7 @@ export default {
     SdThemeSelect,
     SdSearch,
     draggable,
+    SdIcon,
   },
 
   data() {
@@ -132,6 +129,17 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: var(--space--large);
+}
+
+.Benefits-cardList >>> .SdCard h4 {
+  position: relative;
+}
+
+.Benefits-cardList >>> .SdCard svg {
+  position: absolute;
+  right: var(--space--xSmall);
+  top: 0.45rem;
+  cursor: move;
 }
 
 @media (--viewport--medium) {

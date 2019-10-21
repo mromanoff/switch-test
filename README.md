@@ -17,6 +17,7 @@ This is Universal App. First load is SSR (Server Side render) and after Client S
 * Use common, functional and template less components
 * User can change color Theme. Theme Selector (currently is not persistent, user selected state should be saved with cookie or localstorage)
 * User can Search and Filter Benefits within Search Box. On select user will be taking to benefit page.
+* User can Drag and Sort benefit cards.
 
 
 ## Build Setup

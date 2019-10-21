@@ -31,6 +31,7 @@
         <ul class="List List--disc">
           <li>User can change color Theme. Theme Selector (currently is not persistent, user selected state should be saved with cookie or localstorage)</li>
           <li>User can Search and Filter Benefits within Search Box. On select user will be taking to benefit page.</li>
+          <li>User can Drag and Sort benefit cards.</li>
         </ul>
       </div>
     </template>
