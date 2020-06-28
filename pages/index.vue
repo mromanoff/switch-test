@@ -3,7 +3,7 @@
     <template slot="main">
       <h1>S-Company Code Challenge</h1>
 
-      <h2>&copy;oded by Michael Romanoff on 10/20/2019</h2>
+      <h2>&copy;ode by Michael Romanoff on 10/20/2019</h2>
 
       <div class="Module">
         <p>This is Universal App. First load is SSR (Server Side render) and after Client Side.</p>
