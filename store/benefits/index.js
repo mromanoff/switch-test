@@ -29,7 +29,7 @@ export const mutations = {
 export const actions = {
   async fetchBenefits({ commit }) {
     try {
-      const { data } = await axios.get('http://localhost:3000/api/benefits.json');
+      const { data } = await axios.get('/api/benefits.json');
 
       commit(SET_BENEFITS, data.benefits);
     } catch (err) {

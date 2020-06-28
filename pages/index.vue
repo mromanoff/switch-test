@@ -1,7 +1,7 @@
 <template>
   <sd-container class="HomePage">
     <template slot="main">
-      <h1>Switch Code Challenge</h1>
+      <h1>S-Company Code Challenge</h1>
 
       <h2>&copy;oded by Michael Romanoff on 10/20/2019</h2>
 
