@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
-    "nuxt": "^2.13.2",
+    "nuxt": "^3.4.3",
     "suitcss-base": "^5.0.0",
     "suitcss-components-button": "^6.0.2",
     "suitcss-components-form": "^1.0.1",
